@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <section>
+            <div class="col">
+                <div class="first box">
+                    <input id="font-size" type="number" value="16" min="1" max="100" onchange="changeFontSize(this)">
+                </div>
+                <label for="fontSelector">Select Font:</label>
+                <select id="fontSelector" onchange="changeFontFamily()">
+                    <option value="Arial, sans-serif">Arial</option>
+                    <option value="Times New Roman, serif"> Times New Roman</option>
+                    <option value="Courier New, monospace"> Courier New</option>
+                    <option value="Georgia, serif">Georgia</option>
+                    <option value="Verdana, sans-serif">Verdana</option>
+                    <option value="Impact, sans-serif">Impact</option>
+
+                </select>
+                <div class="second box">
+                    <label for="color">Text Color:</label>
+                    <input type="color" onchange="changeTextColor(this)">
+                </div>
+                <div class="third box">
+                    <input type="text" id="newText" placeholder="Enter new text">
+                    <button onclick="applyTextChange()"> Change Text</button>
+
+                </div>
+            </div>
+        <br>
+            <div class="col" id="content-container">
+                <div id="overlay-text" contenteditable="true">You can edit this text</div>
+
+            </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
